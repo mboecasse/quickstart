@@ -80,11 +80,11 @@ app.post('/get_access_token', function(request, response, next) {
   });
   //Mikael test
   
-      if (tokenResponse.item_id) {
+      if (access_token) {
       // If we received a token, show the token ID.
-      example.querySelector('.token').innerText = tokenResponse.item_id;
+      example.querySelector('.token').innerText = access_token;
       example.classList.add('submitted');
-      const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${tokenResponse.item_id}&tid=${window.config.transactionId}`;
+      const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${access_token}&tid=${window.config.transactionId}`;
       fetch(zapierWebHook,{mode: 'cors'});
     }
 
