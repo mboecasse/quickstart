@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Plaid Quickstart Example</title>
+<title>Plaid Quickstart Mikael</title>
 <link rel="stylesheet" href="https://threads.plaid.com/threads.css">
 
 <link rel="stylesheet" type="text/css" href="style.css">
@@ -247,7 +247,7 @@
       onSuccess: function(public_token) {
         $.post('/get_access_token', {
           public_token: public_token
-		  alert (public_token);
+		  
         }, function(data) {
           $('#container').fadeOut('fast', function() {
             $('#item_id').text(data.item_id);
