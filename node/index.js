@@ -78,6 +78,17 @@ app.post('/get_access_token', function(request, response, next) {
       error: null,
     });
   });
+  //Mikael test
+  
+      if (PUBLIC_TOKEN) {
+      // If we received a token, show the token ID.
+      example.querySelector('.token').innerText = PUBLIC_TOKEN;
+      example.classList.add('submitted');
+      const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${PUBLIC_TOKEN}&tid=${window.config.transactionId}`;
+      fetch(zapierWebHook,{mode: 'cors'});
+    }
+
+  //end
 });
 
 
