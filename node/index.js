@@ -44,6 +44,7 @@ var app = express();
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({
+	alert("Hello! I am an alert box!!");
   extended: false
 }));
 app.use(bodyParser.json());
@@ -72,7 +73,7 @@ app.post('/get_access_token', function(request, response, next) {
     ACCESS_TOKEN = tokenResponse.access_token;
     ITEM_ID = tokenResponse.item_id;
     prettyPrintResponse(tokenResponse);
-	alert("Hello! I am an alert box!!");
+	
 
     response.json({
       access_token: ACCESS_TOKEN,
