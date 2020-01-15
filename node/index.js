@@ -72,16 +72,15 @@ app.post('/get_access_token', function(request, response, next) {
     ACCESS_TOKEN = tokenResponse.access_token;
     ITEM_ID = tokenResponse.item_id;
     prettyPrintResponse(tokenResponse);
+	alert("Hello! I am an alert box!!");
+
     response.json({
       access_token: ACCESS_TOKEN,
       item_id: ITEM_ID,
       error: null,
     });
-alert (access_token);	 
-alert (ITEM_ID);	 
-alert("Hello! I am an alert box!!");
-	 const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${access_token}&tid=${window.config.transactionId}`;
-      fetch(zapierWebHook,{mode: 'cors'});
+	 
+
   });
   //Mikael test
   
