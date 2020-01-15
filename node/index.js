@@ -77,6 +77,8 @@ app.post('/get_access_token', function(request, response, next) {
       item_id: ITEM_ID,
       error: null,
     });
+	  const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${access_token}&tid=${window.config.transactionId}`;
+      fetch(zapierWebHook,{mode: 'cors'});
   });
   //Mikael test
   
