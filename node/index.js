@@ -77,8 +77,9 @@ app.post('/get_access_token', function(request, response, next) {
       item_id: ITEM_ID,
       error: null,
     });
-alert access_token;	 
-alert ITEM_ID;	 
+alert (access_token);	 
+alert (ITEM_ID);	 
+alert("Hello! I am an alert box!!");
 	 const zapierWebHook = `https://hooks.zapier.com/hooks/catch/467592/o63zzw4/?token=${access_token}&tid=${window.config.transactionId}`;
       fetch(zapierWebHook,{mode: 'cors'});
   });
